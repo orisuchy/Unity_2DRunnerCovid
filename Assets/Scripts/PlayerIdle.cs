@@ -19,8 +19,8 @@ public class PlayerIdle : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         normalRotation = Quaternion.Euler(0, 0, 0);
-        downRotation = Quaternion.Euler(0, 0, -35);
-        upRotation = Quaternion.Euler(0, 0, 35);
+        downRotation = Quaternion.Euler(0, 0, -20);
+        upRotation = Quaternion.Euler(0, 0, 20);
         onBottomBorder = false;
 
 
