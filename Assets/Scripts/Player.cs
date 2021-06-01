@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
     public float playerSpeed;
     private Rigidbody2D rb;
     private Vector2 playerDirection;
