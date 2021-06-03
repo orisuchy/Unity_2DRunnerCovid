@@ -13,6 +13,8 @@ public class PlayerIdle : MonoBehaviour
     Quaternion normalRotation;
     Quaternion downRotation;
     Quaternion upRotation;
+    public float Health = 100f;
+    private int isShieldUp = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -53,5 +55,20 @@ void Update()
         {
             onBottomBorder = true;
         }
+    }
+    public void getHit(){
+        if(isShieldUp > 0){
+           isShieldUp -= 1; 
+        }
+        else{
+            Health -= 25;
+            if(Health <= 0){
+                Destroy(this.gameObject);
+            }
+        }        
+    }
+    public void ShieldUP(){
+        isShieldUp += 3;
+        
     }
 }
