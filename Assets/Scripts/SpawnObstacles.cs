@@ -6,6 +6,8 @@ public class SpawnObstacles : MonoBehaviour
 {
     public GameObject obstacle;
     public GameObject shieldMask;
+    public GameObject alcogel;
+
     public float maxX;
     public float minX;
     public float maxY;
@@ -13,7 +15,10 @@ public class SpawnObstacles : MonoBehaviour
     public float timeBetweenSpawn;
     private float spawnTime;
     public float MStimeBetweenSpawn;
+    public float ALtimeBetweenSpawn;
     private float spawnTimeMaskShield;
+    private float spawnTimeAlcogel;
+
 
 
     // Update is called once per frame
@@ -28,6 +33,12 @@ public class SpawnObstacles : MonoBehaviour
         {
             Spawn(shieldMask);
             spawnTimeMaskShield = Time.time + MStimeBetweenSpawn;
+        }
+
+        if (Time.time > spawnTimeAlcogel)
+        {
+            Spawn(alcogel);
+            spawnTimeAlcogel = Time.time + ALtimeBetweenSpawn;
         }
     }
 
