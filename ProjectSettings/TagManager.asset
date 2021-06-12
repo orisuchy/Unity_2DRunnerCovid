@@ -48,6 +48,9 @@ TagManager:
   - name: Enemies
     uniqueID: 3237265571
     locked: 0
+  - name: pickups
+    uniqueID: 4002028247
+    locked: 0
   - name: Background
     uniqueID: 585977851
     locked: 0

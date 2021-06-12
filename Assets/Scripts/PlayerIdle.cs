@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerIdle : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class PlayerIdle : MonoBehaviour
     Quaternion downRotation;
     Quaternion upRotation;
     public float Health = 100f;
-    private int isShieldUp = 0;
+    public int isShieldUp = 0;
+
+    public Image[] shield;
+    public Sprite fullShield;
+    public Sprite emptyShield;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +52,13 @@ void Update()
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, downRotation, tiltSmooth * Time.deltaTime);
         }
+        for(int i=0; i<shield.Length; i++){
+            if(i< isShieldUp){
+                shield[i].enabled = true;
+            }else {
+                shield[i].enabled = false;
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -68,7 +80,7 @@ void Update()
         }        
     }
     public void ShieldUP(){
-        isShieldUp += 3;
+        isShieldUp = 3;
         
     }
 }
