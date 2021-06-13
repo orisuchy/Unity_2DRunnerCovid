@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Border
+  - Shooter
+  - Virus
   layers:
   - Default
   - TransparentFX
@@ -42,8 +44,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 4183011869
+  - name: Background
+    uniqueID: 585977851
     locked: 0
   - name: Enemies
     uniqueID: 3237265571
@@ -51,6 +53,6 @@ TagManager:
   - name: pickups
     uniqueID: 4002028247
     locked: 0
-  - name: Background
-    uniqueID: 585977851
+  - name: Player
+    uniqueID: 4183011869
     locked: 0

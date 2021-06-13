@@ -16,7 +16,7 @@ public class PlayerIdle : MonoBehaviour
     Quaternion upRotation;
     public float Health = 100f;
     public int isShieldUp = 0;
-
+   
     public Image[] shield;
     public Sprite fullShield;
     public Sprite emptyShield;
