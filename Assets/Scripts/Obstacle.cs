@@ -18,6 +18,10 @@ public class Obstacle : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        else if(collision.tag == "Shooter")
+        {
+            Destroy(this.gameObject);
+        }
         else if (collision.tag == "Player" && hitFlag) 
         {
             hitFlag = false;

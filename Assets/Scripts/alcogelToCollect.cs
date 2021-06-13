@@ -7,7 +7,6 @@ public class alcogelToCollect : MonoBehaviour
     private GameObject player;
     private GameObject shooter;
     
-    private bool shooterOn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +21,15 @@ public class alcogelToCollect : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        else if (collision.tag == "Player" && !shooterOn)
+        else if (collision.tag == "Player")
         {
-
             Destroy(this.gameObject);
-            shooterOn = true;
             shooter.SetActive(true);
-            return;
+            shooter.GetComponent<alcogelShooter>().gelTimer = 6;
+            shooter.GetComponent<alcogelShooter>().gelTimerText.text = "10";
+            shooter.GetComponent<alcogelShooter>().alcogelOn = true;
+
+            //return;
         }
     }
 }

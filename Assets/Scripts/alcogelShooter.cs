@@ -6,23 +6,23 @@ using UnityEngine.UI;
 public class alcogelShooter : MonoBehaviour
 {
 
-    public float fireRate = 0;
-    public LayerMask notToHit;
+    public float fireRate;
+    //public LayerMask notToHit;
     public Transform firePoint;
     public GameObject gelPrefab;
     public Text gelTimerText;
     public float gelTimer;
 
-    bool alcogelOn = false;
+    public bool alcogelOn = false;
     float timeToFire = 0;
     
 
 
     void Start()
     {
-        gameObject.SetActive(false);
-        gelTimer = 10;
-
+        //gameObject.SetActive(false);
+        //gelTimerText.text = "";
+        //gelTimer = 6;
     }
 
     // Update is called once per frame
@@ -30,25 +30,30 @@ public class alcogelShooter : MonoBehaviour
     {
         if (gelTimer > 0)
         {
-            Shoot();
-            //if (alcogelOn && Time.time > timeToFire)
-            //{
-            //    timeToFire = Time.time + 1 / fireRate;
-            //    Shoot();
-            //}
+            //Shoot();
+
+            if (alcogelOn && Time.time > timeToFire)
+            {
+                timeToFire = Time.time + 1/fireRate;
+                Shoot();
+            }
+
             gelTimer -= 1 * Time.deltaTime;
             gelTimerText.text = ((int)gelTimer).ToString();
         }
-        if (gelTimer == 0)
+        else
         {
+            gelTimerText.text = "";
+            gelTimer = 6;
+            alcogelOn = false;
             gameObject.SetActive(false);
         }
     }
 
     void Shoot()
     {
-        firePoint.position = new Vector3(firePoint.position.x, firePoint.position.y, -10);
-        Instantiate(gelPrefab, firePoint.position, firePoint.rotation);
+        firePoint.position = new Vector3(firePoint.position.x, firePoint.position.y, 0);
+        Instantiate(gelPrefab, firePoint.position, Quaternion.Euler(0, 0, 0));
         //Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
     }
 }

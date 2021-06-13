@@ -7,6 +7,7 @@ TagManager:
   - Border
   - Shooter
   - Virus
+  - gelBorder
   layers:
   - Default
   - TransparentFX

@@ -5608,7 +5608,7 @@ GameObject:
   - component: {fileID: 777848832}
   m_Layer: 0
   m_Name: RSide border
-  m_TagString: Border
+  m_TagString: gelBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5621,8 +5621,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777848830}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
-  m_LocalScale: {x: 3.36, y: 1, z: 1}
+  m_LocalPosition: {x: 10.01, y: -0, z: 0}
+  m_LocalScale: {x: 4, y: 1.05, z: 1}
   m_Children: []
   m_Father: {fileID: 2127680426}
   m_RootOrder: 3
@@ -5658,7 +5658,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6218,7 +6218,7 @@ PrefabInstance:
     - target: {fileID: 3938456401807557810, guid: bfca5d00b8b992449bd1e91d0b708d97,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -105.04464
+      value: -105
       objectReference: {fileID: 0}
     - target: {fileID: 3938456401807557810, guid: bfca5d00b8b992449bd1e91d0b708d97,
         type: 3}
@@ -6637,15 +6637,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a97882d5ab3c0448e37eec8970771d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
-  notToHit:
-    serializedVersion: 2
-    m_Bits: 0
+  fireRate: 3
   firePoint: {fileID: 589703744}
   gelPrefab: {fileID: 2746437477572677570, guid: f0149232b3e002a49837a4e2d90491f8,
     type: 3}
   gelTimerText: {fileID: 335052224}
   gelTimer: 0
+  alcogelOn: 0
 --- !u!1 &1455897868
 GameObject:
   m_ObjectHideFlags: 0
@@ -6960,7 +6958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587747446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 18, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 193161268}
@@ -7317,9 +7315,9 @@ MonoBehaviour:
   minX: 3
   maxY: 4
   minY: -4
-  timeBetweenSpawn: 2
-  MStimeBetweenSpawn: 2
-  ALtimeBetweenSpawn: 1
+  timeBetweenSpawn: 0.3
+  MStimeBetweenSpawn: 8
+  ALtimeBetweenSpawn: 7
 --- !u!1 &2013189694
 GameObject:
   m_ObjectHideFlags: 0
