@@ -7306,7 +7306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d01b6122e32c44294013c7007b2830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 8058892655422860873, guid: 54cc375e9eb902843bc6839147152939,
+  obstacle: {fileID: 9179829591473588581, guid: 22f86a9843712bf439716cd983bc2e6e,
     type: 3}
   shieldMask: {fileID: 8406103574026124365, guid: a27221d50975af647a1d9f0a9552de22,
     type: 3}
