@@ -13,16 +13,11 @@ public class gelBullet : MonoBehaviour
         rb.velocity = transform.right * speed;   
     }
 
-    //void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if (col.gameObject.tag == "Virus")
-    //    {
-    //        Destroy(col);
-    //        Destroy(gameObject);
-    //    }
-    //    if(col.gameObject.tag == "gelBorder")
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "gelBorder")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
