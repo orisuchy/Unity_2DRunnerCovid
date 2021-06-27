@@ -6,6 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     private GameObject player;
     private bool hitFlag = true; // needed to prevent the enemy to hit the player twice in one enounter.
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +27,11 @@ public class Obstacle : MonoBehaviour
         {
             hitFlag = false;
             //Destroy(player.gameObject);
-            Destroy(this.gameObject);
+            
             PlayerIdle other = (PlayerIdle) player.GetComponent(typeof(PlayerIdle));
-            other.getHit();            
+            other.getHit();
+            other.playCough();
+            Destroy(this.gameObject);
             return;
         }
     }

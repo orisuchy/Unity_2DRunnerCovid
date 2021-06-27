@@ -21,6 +21,9 @@ public class PlayerIdle : MonoBehaviour
     public Sprite fullShield;
     public Sprite emptyShield;
 
+    public AudioSource audioSource;
+    public AudioClip[] coughsSoundsArr;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +33,9 @@ public class PlayerIdle : MonoBehaviour
         upRotation = Quaternion.Euler(0, 0, 20);
         onBottomBorder = false;
 
+        audioSource.clip = coughsSoundsArr[Random.Range(0, coughsSoundsArr.Length)];
 
-}
+    }
 
 // Update is called once per frame
 void Update()
@@ -82,5 +86,11 @@ void Update()
     public void ShieldUP(){
         isShieldUp = 3;
         
+    }
+
+    public void playCough()
+    {
+        audioSource.PlayOneShot(audioSource.clip);
+        audioSource.clip = coughsSoundsArr[Random.Range(0, coughsSoundsArr.Length)];
     }
 }
