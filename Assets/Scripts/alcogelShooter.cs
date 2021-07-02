@@ -40,6 +40,7 @@ public class alcogelShooter : MonoBehaviour
 
             gelTimer -= 1 * Time.deltaTime;
             gelTimerText.text = ((int)gelTimer).ToString();
+
         }
         else
         {
