@@ -11,6 +11,7 @@ public class alcogelBarScript : MonoBehaviour
     private float MaxAlcogel;
     private GameObject alcogelBarObject;
 
+    alcogelShooter shooter;
     PlayerIdle player;
 
     // Start is called before the first frame update
@@ -19,6 +20,8 @@ public class alcogelBarScript : MonoBehaviour
         AlcogelBar = GetComponent<Image>();
         alcogelBarObject = GameObject.FindGameObjectWithTag("AlcogelSlider");
         player = FindObjectOfType<PlayerIdle>();
+        shooter = FindObjectOfType<alcogelShooter>();
+
         MaxAlcogel = 6f;
         //alcogelBarObject.SetActive(false);
     }
@@ -26,13 +29,8 @@ public class alcogelBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurrentAlcogel = FindObjectOfType<alcogelShooter>().gelTimer;
+        CurrentAlcogel = shooter.gelTimer;
         if (CurrentAlcogel >= 0)
-        {
-            //alcogelBarObject.SetActive(true);
             AlcogelBar.fillAmount = CurrentAlcogel / MaxAlcogel;
-        }
-        //else
-        //    alcogelBarObject.SetActive(false);
     }
 }

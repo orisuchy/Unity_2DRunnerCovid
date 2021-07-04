@@ -7,7 +7,7 @@ public class alcogelToCollect : MonoBehaviour
 
     private GameObject player;
     private GameObject shooter;
-    public GameObject alcogelBar;
+    //public GameObject alcogelBar;
 
 
     // Start is called before the first frame update
@@ -16,8 +16,6 @@ public class alcogelToCollect : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         //shooter = GameObject.FindGameObjectWithTag("Shooter");
         shooter = player.transform.Find("Alcogel").gameObject;
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
