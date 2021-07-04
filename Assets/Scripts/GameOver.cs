@@ -19,5 +19,7 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        FindObjectOfType<SpawnObstacles>().levelStartTime = Time.time;
+        FindObjectOfType<SpawnObstacles>().levelNum = 1;
     }
 }
