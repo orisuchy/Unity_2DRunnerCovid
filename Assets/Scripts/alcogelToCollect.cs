@@ -30,7 +30,7 @@ public class alcogelToCollect : MonoBehaviour
             shooter.SetActive(true);
             //alcogelBar.SetActive(true);
             shooter.GetComponent<alcogelShooter>().gelTimer = 6;
-            shooter.GetComponent<alcogelShooter>().gelTimerText.text = "10";
+            //shooter.GetComponent<alcogelShooter>().gelTimerText.text = "10";
             shooter.GetComponent<alcogelShooter>().alcogelOn = true;
 
             //return;

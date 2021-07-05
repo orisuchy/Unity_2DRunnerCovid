@@ -39,13 +39,13 @@ public class alcogelShooter : MonoBehaviour
             }
 
             gelTimer -= 1 * Time.deltaTime;
-            gelTimerText.text = ((int)gelTimer).ToString();
+            //gelTimerText.text = ((int)gelTimer).ToString();
 
         }
         else
         {
-            gelTimerText.text = "";
-            gelTimer = 6;
+            //gelTimerText.text = "";
+            //gelTimer = 6;
             alcogelOn = false;
             gameObject.SetActive(false);
         }

@@ -77,6 +77,7 @@ void Update()
            isShieldUp -= 1; 
         }
         else{
+            playCough();
             Health -= 25;
             if(Health <= 0){
                 Destroy(this.gameObject);

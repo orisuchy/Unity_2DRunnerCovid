@@ -23,6 +23,7 @@ public class alcogelBarScript : MonoBehaviour
         shooter = FindObjectOfType<alcogelShooter>();
 
         MaxAlcogel = 6f;
+        
         //alcogelBarObject.SetActive(false);
     }
 
@@ -30,7 +31,6 @@ public class alcogelBarScript : MonoBehaviour
     void Update()
     {
         CurrentAlcogel = shooter.gelTimer;
-        if (CurrentAlcogel >= 0)
-            AlcogelBar.fillAmount = CurrentAlcogel / MaxAlcogel;
+        AlcogelBar.fillAmount = CurrentAlcogel / MaxAlcogel;
     }
 }
