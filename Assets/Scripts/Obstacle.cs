@@ -36,6 +36,8 @@ public class Obstacle : MonoBehaviour
             PlayerIdle other = (PlayerIdle) player.GetComponent(typeof(PlayerIdle));
             other.getHit();
             other.playCough();
+            Instantiate(virusRedExplosion, transform.position, transform.rotation);
+            virusRedExplosion.Play();
             Destroy(this.gameObject);
             return;
         }
