@@ -10,7 +10,8 @@ public class StartGame : MonoBehaviour
 
     void Start()
     {
-        Cursor.SetCursor(cursorTexture, new Vector2(0, 0), CursorMode.Auto);
+        // An idea to change the cursor... maybe later on
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
     }
 
     public void LoadScene(string name){
