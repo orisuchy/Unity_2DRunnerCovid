@@ -5,7 +5,9 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     private GameObject player;
-    public ParticleSystem explosion;
+    public ParticleSystem virusExplosion;
+    public ParticleSystem virusRedExplosion;
+
     private bool hitFlag = true; // needed to prevent the enemy to hit the player twice in one enounter.
     
     // Start is called before the first frame update
@@ -22,8 +24,8 @@ public class Obstacle : MonoBehaviour
         }
         else if(collision.tag == "Shooter")
         {
-            Instantiate(explosion, transform.position, transform.rotation);
-            explosion.Play();
+            Instantiate(virusExplosion, transform.position, transform.rotation);
+            virusExplosion.Play();
             Destroy(this.gameObject);
         }
         else if (collision.tag == "Player" && hitFlag) 
