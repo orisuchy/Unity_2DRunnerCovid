@@ -9,6 +9,7 @@ TagManager:
   - Virus
   - gelBorder
   - AlcogelSlider
+  - ScoreObject
   layers:
   - Default
   - TransparentFX

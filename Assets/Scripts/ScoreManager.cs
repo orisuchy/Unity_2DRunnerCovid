@@ -8,6 +8,13 @@ public class ScoreManager : MonoBehaviour
 
     public Text scoreText;
     private float score;
+    public GameObject scoreobj;
+
+    void Start()
+    {
+        scoreobj = GameObject.FindGameObjectWithTag("ScoreObject");
+    }
+
     
     // Update is called once per frame
     void Update()
@@ -16,6 +23,8 @@ public class ScoreManager : MonoBehaviour
         {
             score += 1 * Time.deltaTime;
             scoreText.text = ((int)score).ToString();
+            highscore_script other = (highscore_script) scoreobj.GetComponent(typeof(highscore_script));
+            other.updateScore((int)score);
         }
     }
 }

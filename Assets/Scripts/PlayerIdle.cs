@@ -24,6 +24,7 @@ public class PlayerIdle : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip[] coughsSoundsArr;
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,7 @@ public class PlayerIdle : MonoBehaviour
         downRotation = Quaternion.Euler(0, 0, -20);
         upRotation = Quaternion.Euler(0, 0, 20);
         onBottomBorder = false;
-
+        
         audioSource.clip = coughsSoundsArr[Random.Range(0, coughsSoundsArr.Length)];
 
     }
@@ -80,7 +81,7 @@ void Update()
             playCough();
             Health -= 25;
             if(Health <= 0){
-                Destroy(this.gameObject);
+                Destroy(this.gameObject);                
             }
         }        
     }
