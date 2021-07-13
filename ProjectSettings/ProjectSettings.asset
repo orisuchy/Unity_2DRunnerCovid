@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Ron&Ori
   productName: Flappy COVID
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 00c62e5d343030244bdeebceefc3a280, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.427451, g: 0.5686275, b: 0.6431373, a: 1}
   m_ShowUnitySplashScreen: 1
