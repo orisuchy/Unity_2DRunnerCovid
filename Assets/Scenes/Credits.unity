@@ -960,8 +960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.1, y: -128.8}
-  m_SizeDelta: {x: 800, y: 823.1}
+  m_AnchoredPosition: {x: -49.8, y: -130.8}
+  m_SizeDelta: {x: 842.57764, y: 819.04504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584098166
 MonoBehaviour:
@@ -997,8 +997,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "\nOri Suchy & Ron Keller - Creators\n\nCorona(city of wuhan) by Alfons  
     - the theme song \n\nHooson - Prototype mechanic guide\n\nFreepik - Images\nFlamingText
-    - Titles\n\nGal, Michael, David, Eytam, Nadav, Tomer, Amir, Anna, Maya, Yonatan
-    and many more - Game testers \ncouldnt make it without you guys.\n\n"
+    - Titles\n\nGal, Michael, David, Eytam, Nadav, Tomer, Amir, Anna, Maya, Uri,
+    Yonatan and many more - Game testers \ncouldnt make it without you guys.\n\n"
 --- !u!222 &1584098167
 CanvasRenderer:
   m_ObjectHideFlags: 0
