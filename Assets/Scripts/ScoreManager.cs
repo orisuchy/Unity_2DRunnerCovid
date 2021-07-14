@@ -7,15 +7,25 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
 
-    public Text scoreText;
+    
     private float score;
-    public GameObject scoreobj;
-    private highscore_script other;
+    static public float highscore = 0;
+    public Text scoreText; 
+    public Text highScoreText;
+    private Scene currentScene;
+    private string sceneName;
+    
 
     void Start()
     {
-
-        other = (highscore_script)scoreobj.GetComponent(typeof(highscore_script));
+               
+        currentScene = SceneManager.GetActiveScene ();        
+        sceneName = currentScene.name; 
+        if (sceneName == "HighScore") 
+        {
+             highScoreText.text =  ((int)highscore).ToString();
+        }
+        
         
     }
 
@@ -23,21 +33,19 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Player") != null)
-        {
-            score += 1 * Time.deltaTime;
-            scoreText.text = ((int)score).ToString();
-            //highscore_script other = (highscore_script) scoreobj.GetComponent(typeof(highscore_script));
+        if(sceneName == "idleOneButton"){        
+            if (GameObject.FindGameObjectWithTag("Player") != null)
+            {
+                score += 1 * Time.deltaTime;
+                if(scoreText != null){
+                    scoreText.text = ((int)score).ToString();
+                }                
+                if(score>highscore){
+                    highscore=score;                
+                }            
+            }
         }
     }
 
-   public void updateScore()
-    {
-        other.updateScore((int)score);
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        scoreobj = GameObject.FindGameObjectWithTag("ScoreObject");
-    }
+   
 }

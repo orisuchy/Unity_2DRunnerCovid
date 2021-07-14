@@ -229,7 +229,6 @@ RectTransform:
   - {fileID: 1164749819}
   - {fileID: 667904310}
   - {fileID: 1676893413}
-  - {fileID: 2020260064}
   - {fileID: 1385468835}
   m_Father: {fileID: 1213458910}
   m_RootOrder: 0
